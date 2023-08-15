@@ -1,13 +1,25 @@
 {
   "compilerOptions": {
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
-    "target": "ESNext",
-    "baseUrl": "src",
-    "sourceMap": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "outDir": "dist"
+    "baseUrl": ".",
+    "target": "es6" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
+    "module": "commonjs" /* Specify what module code is generated. */,
+    "rootDir": ".",
+    "outDir": "dist" /* Specify an output folder for all emitted files. */,
+    "lib": ["ESNext", "DOM"] /* Specifies the library files to be included in the compilation */,
+    "removeComments": true /* Disable emitting comments. */,
+    "allowJs": true,
+    "paths": {
+      "@src/*": ["src/*"]
+    },
+    "esModuleInterop": true /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables `allowSyntheticDefaultImports` for type compatibility. */,
+    "strict": true /* Enable all strict type-checking options. */,
+    "noImplicitAny": true,
+    "moduleResolution": "Node",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "skipLibCheck": true /* Skip type checking all .d.ts files. */,
+    "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist", "__tests__", "coverage"]
 }
